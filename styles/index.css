@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+body {
+  background-color: #323C4D;
+  background: rgb(140,165,212);
+  background: radial-gradient(circle, rgba(140,165,212,1) 0%, rgba(73,119,204,1) 100%);
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  padding: 30px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Dosis', sans-serif;
+  color: #fff;
+}
+
+.primary-button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #323C4D;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner-content {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -150px;
+}
+
+.banner-content .text-container {
+  max-width: 550px;
+  color: #fff;
+}
+
+.banner-content .text-container h2 {
+  font-weight: 400;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.banner-content .text-container p {
+  font-size: 16px;
+}
+
+.banner-content img {
+  width: 25%;
+  min-width: 300px;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.waves svg {
+  position: relative;
+  display: block;
+  width: calc(190% + 1.3px);
+  height: 100px;
+  transform: rotateY(180deg);
+}
+
+.waves .shape-fill {
+  fill: #FFFFFF;
+}
+
+.services {
+  width: 100%;
+  position: relative;
+  padding: 10vh 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fff;
+}
+
+.services .card {
+  color: #fff;
+  width: 300px;
+  padding: 40px 30px;
+  text-align: center;
+  background: rgba(140, 165, 212, 0.86);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(140, 165, 212, 1);
+  margin: 20px;
+}
+
+.card .card-header {
+  padding-bottom: 30px;
+}
+
+.card .card-header h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.card p {
+  padding-bottom: 40px;
+  color: #f7f7f7;
+}
+
+.card a {
+  color: #375999;
+}
