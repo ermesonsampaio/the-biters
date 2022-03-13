@@ -109,10 +109,14 @@ header {
   fill: #FFFFFF;
 }
 
+#services-title {
+  padding-bottom: 100px;
+}
+
 .services {
   width: 100%;
   display: flex;
-  padding: 10vh 50px;
+  padding: 10vh 70px;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
@@ -121,7 +125,7 @@ header {
 .service {
   display: flex;
   align-items: center;
-  height: 70vh;
+  height: 50vh;
 }
 
 .service-data {
