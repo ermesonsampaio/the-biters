@@ -14,3 +14,22 @@ menuItems.forEach(item => {
   });
 });
 
+const toTopButton = document.querySelector('.scroll-to-top');
+const title = document.querySelector('#services-title'); 
+
+document.addEventListener('scroll', () => {
+  if (title.getBoundingClientRect().top < window.innerHeight) {
+    toTopButton.removeAttribute('hide');
+    toTopButton.setAttribute('show', 'true');
+  } else {
+    toTopButton.removeAttribute('show');
+    toTopButton.setAttribute('hide', 'true');
+  }
+});
+
+toTopButton.addEventListener('click', () => {
+  window.scroll({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
