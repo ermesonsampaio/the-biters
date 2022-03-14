@@ -1,16 +1,27 @@
 const menuItems = document.querySelectorAll('a[href^="#"]');
 
+function scrollTo(to) {
+  console.log(to);
+
+  window.scroll({
+    top: to ? to : 0,
+    behavior: 'smooth',
+  });
+}
+
 menuItems.forEach(item => {
+  console.log(item)
+
   item.addEventListener('click', event => {
     event.preventDefault();
-    
+  
     const id = event.target.getAttribute('href');
-    const to = document.querySelector(id).offsetTop;
+    const to = document
+      .querySelector(id)
+      .getBoundingClientRect()
+      .top;
 
-    window.scroll({
-      top: to - 50,
-      behavior: 'smooth',
-    });
+    scrollTo(to);
   });
 });
 
