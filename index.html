@@ -5,6 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/index.css">
+
+  <!-- Splide -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+
   <title>The Biters</title>
 </head>
 <body>
@@ -15,6 +20,10 @@
       <ul class="nav-items">
         <li class="nav-item">
           <a href="#services-title" class="primary-button">O que fazemos?</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#portfolio-title" class="primary-button">Portfólio</a>
         </li>
       <ul>
     </nav>
@@ -42,7 +51,8 @@
     </div>
   </header>
 
-  <main class="services">
+  <main>
+    <section class="services">
     <h1 id="services-title">Nossas Soluções</h1>
 
     <section class="service">
@@ -77,6 +87,35 @@
           <h1>Desenvolvimento Web</h1>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt autem amet, aliquam pariatur enim culpa, earum tempora odit laboriosam repellat suscipit molestiae illum vero! Maxime error tempora rem corrupti voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos labore eligendi nobis animi laudantium cum nulla provident dolor similique hic illum reprehenderit libero, blanditiis eaque praesentium consequuntur vero sint ipsa.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="tilt">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <h1 id="portfolio-title">Projetos Desenvolvidos</h1>
+
+      <div class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="assets/images/bikcraft.jpg"/>
+            </li>
+
+            <li class="splide__slide">
+              <img src="assets/images/dogs.jpg"/>
+            </li>
+
+            <li class="splide__slide">
+              <img src="assets/images/wildbeast.jpg"/>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
