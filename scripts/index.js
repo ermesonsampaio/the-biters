@@ -1,8 +1,6 @@
 const menuItems = document.querySelectorAll('a[href^="#"]');
 
 function scrollTo(to) {
-  console.log(to);
-
   window.scroll({
     top: to ? to : 0,
     behavior: 'smooth',
@@ -10,8 +8,6 @@ function scrollTo(to) {
 }
 
 menuItems.forEach(item => {
-  console.log(item)
-
   item.addEventListener('click', event => {
     event.preventDefault();
   
