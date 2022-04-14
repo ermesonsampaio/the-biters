@@ -39,8 +39,8 @@ toTopButton.addEventListener('click', scrollTo);
 const splide = new Splide('.splide', {
   type: 'loop',
   width: '80%',
-  padding: '10rem',
-  arrows: false,
+  padding: '5rem',
+  arrows: true,
 });
 
 splide.mount();
