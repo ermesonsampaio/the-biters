@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-800 text-white;
+  @apply bg-gradient-to-bl from-indigo-500 to-indigo-800 text-white;
 }

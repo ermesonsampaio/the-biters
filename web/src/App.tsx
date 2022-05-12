@@ -8,6 +8,7 @@ import WebDevelopment from './assets/images/website.svg';
 import Bikcraft from './assets/images/bikcraft.jpg';
 import Dogs from './assets/images/dogs.jpg';
 import Wildbeast from './assets/images/wildbeast.jpg';
+import { Widget } from './components/Widget';
 
 function App() {
   const solutionsRef = useRef<HTMLDivElement>(null);
@@ -47,8 +48,8 @@ function App() {
 
   return (
     <>
-      <div className="h-screen flex flex-col bg-gradient-to-bl from-indigo-500 to-indigo-800 px-10">
-        <nav className="px-12 py-5 border-b border-slate-300/20 flex justify-between items-center fixed bg-gray-400/10 backdrop-blur-sm self-center w-full top-0 z-50">
+      <div className="h-screen flex flex-col px-10">
+        <nav className="px-12 py-5 border-b border-slate-300/20 flex justify-between items-center fixed bg-gray-400/10 backdrop-blur-sm self-center w-full top-0 z-10">
           <button
             type="button"
             onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}
@@ -74,7 +75,7 @@ function App() {
         </nav>
 
         <div className="flex flex-1 items-center justify-center">
-          <div className="flex items-center flex-col gap-y-12 md:gap-x-12 justify-center mt-10 md:flex-row">
+          <div className="flex items-center flex-col gap-y-12 md:gap-x-16 justify-center mt-10 md:flex-row">
             <img src={WelcomeIllustration} className="w-3/5 md:w-3/12 h-auto" />
 
             <div className="flex flex-col max-w-xl">
@@ -93,7 +94,10 @@ function App() {
         </div>
       </div>
 
-      <div ref={solutionsRef} className="flex flex-col items-center p-10">
+      <div
+        ref={solutionsRef}
+        className="flex flex-col items-center p-10 bg-zinc-800"
+      >
         <h1 className="mt-16 text-3xl font-bold pb-8">Nossas Soluções</h1>
 
         {solutions.map(({ title, description, image }) => (
@@ -113,7 +117,7 @@ function App() {
 
       <div
         ref={portfolioRef}
-        className="flex flex-col items-center bg-zinc-900 py-10"
+        className="flex flex-col items-center py-10 bg-zinc-800"
       >
         <h1 className="text-3xl font-bold my-16">Portfólio</h1>
 
@@ -126,6 +130,7 @@ function App() {
             padding: '5rem',
           }}
           aria-label="My Favorite Images"
+          style={{ zIndex: 0 }}
         >
           <SplideSlide>
             <img src={Bikcraft} alt="Bikcraft" />
@@ -138,6 +143,20 @@ function App() {
           </SplideSlide>
         </Splide>
       </div>
+
+      <footer className="flex m-auto justify-between w-11/12 items-center p-8">
+        <button
+          type="button"
+          onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <img src={Logo} className="w-10 h-10" />
+        </button>
+        <span className="text-slate-100 text-lg leading-relaxed font-medium">
+          The Biters - 2022
+        </span>
+      </footer>
+
+      <Widget />
     </>
   );
 }
