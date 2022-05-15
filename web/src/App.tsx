@@ -152,7 +152,7 @@ function App() {
           <img src={Logo} className="w-10 h-10" />
         </button>
         <span className="text-slate-100 text-lg leading-relaxed font-medium">
-          The Biters - 2022
+          Copyright © 2022 The Biters
         </span>
       </footer>
 
