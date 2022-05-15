@@ -103,7 +103,7 @@ function App() {
         {solutions.map(({ title, description, image }) => (
           <div
             key={title}
-            className="flex mt-24 gap-x-4 items-center justify-between w-3/4"
+            className="flex flex-col mt-24 gap-x-4 items-center justify-between w-3/4 md:flex-row"
           >
             <img src={image.source} className="w-4/12" />
 

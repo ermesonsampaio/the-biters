@@ -5,30 +5,38 @@ import { Loading } from '../../Loading';
 
 interface ContactContentStepProps {
   onBack(): void;
+  onError(): void;
   onContactSent(): void;
 }
 
-export function ContactContentStep({ onContactSent }: ContactContentStepProps) {
+export function ContactContentStep({
+  onContactSent,
+  onError,
+}: ContactContentStepProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSendingMessage, setIsSendingMessage] = useState(false);
 
   async function handleSubmitContact(event: FormEvent) {
-    event.preventDefault();
-    setIsSendingMessage(true);
+    try {
+      event.preventDefault();
+      setIsSendingMessage(true);
 
-    await api('/messages', {
-      method: 'POST',
-      data: {
-        content: message,
-        authorName: name,
-        authorEmail: email,
-      },
-    });
-
-    onContactSent();
-    setIsSendingMessage(false);
+      await api('/messages', {
+        method: 'POST',
+        data: {
+          content: message,
+          authorName: name,
+          authorEmail: email,
+        },
+      });
+    } catch {
+      onError();
+    } finally {
+      onContactSent();
+      setIsSendingMessage(false);
+    }
   }
 
   return (
